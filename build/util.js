@@ -47,7 +47,7 @@ exports.promiseTimeout = function (promise, timeout) {
     timer = setTimeout(function () {
       var err = new Error('[Headless Chrome] Timeout after ' + timeout + ' ms');
       err.code = 'TIMEOUT';
-      throw err;
+      reject(err);
     }, timeout);
     return timer;
   }), promise.then(function (value) {

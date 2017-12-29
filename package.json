@@ -5,18 +5,18 @@
   "main": "index.js",
   "scripts": {
     "documentation": "documentation readme lib/actions.js --section=Methods",
-    "build": "rm -rf build; babel lib -d build",
+    "build": "rm -rf build & babel lib -d build",
     "watch": "babel --watch lib -d build",
-    "prepublish": "npm run build; npm run test",
+    "prepublish": "npm run build & npm run test",
     "prepare": "npm run build",
-    "prepare-minor": "npm run test; npm version minor; git push; git push --tags; npm publish",
-    "prepare-patch": "npm run test; npm version patch; git push; git push --tags; npm publish",
+    "prepare-minor": "npm run test &  npm version minor &  git push &  git push --tags &  npm publish",
+    "prepare-patch": "npm run test &  npm version patch &  git push &  git push --tags &  npm publish",
     "preversion": "npm run -s documentation",
-    "test": "npm run build; DEBUG='HeadlessChrome' tap test 'build/test/**/*.js'"
+    "test": "npm run build & DEBUG='HeadlessChrome' tap test 'build/test/**/*.js'"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/LucianoGanga/simple-headless-chrome.git"
+    "url": "git+https://github.com/pavei/simple-headless-chrome.git"
   },
   "keywords": [
     "headless",
@@ -33,15 +33,15 @@
     "node",
     "browser"
   ],
-  "author": "Luciano Andrés Ganga Carabante",
+  "author": "Vinicius pavei",
   "engines": {
     "node": ">=4"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/LucianoGanga/simple-headless-chrome/issues"
+    "url": "https://github.com/pavei/simple-headless-chrome/issues"
   },
-  "homepage": "https://github.com/LucianoGanga/simple-headless-chrome#readme",
+  "homepage": "https://github.com/pavei/simple-headless-chrome#readme",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "bluebird": "^3.5.0",
